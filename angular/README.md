@@ -90,13 +90,13 @@ Angular application goes through an entire set of processes or has a lifecycle r
 
 - **Constructor:** A default method which is called when the class is instantiated.
 - **ngOnChanges:** Executes when a new component is created
-- ngOnInit: This is called whenever the initialization of the directive/component
-- ngDoCheck: Runs when change detection runs.
-- ngAfterContentInit: This is called after content(ng-content) has been projected into the view.
-- ngAfterContentChecked: This is called after every projected content has been checked
-- ngAfterViewInit: Called after the components view (and child view) has been initialized.
-- ngAfterViewChecked: Called every time the view (and child view) has been checked.
-- ngOnDestroy: This is the cleanup phase just before Angular destroys the directive/component.
+- **ngOnInit: This is called whenever the initialization of the directive/component
+- **ngDoCheck: Runs when change detection runs.
+- **ngAfterContentInit:** This is called after content(ng-content) has been projected into the view.
+- **ngAfterContentChecked:** This is called after every projected content has been checked
+- **ngAfterViewInit:** Called after the components view (and child view) has been initialized.
+- **ngAfterViewChecked:** Called every time the view (and child view) has been checked.
+- **ngOnDestroy:** This is the cleanup phase just before Angular destroys the directive/component.
 
 ## 10 - What is a data binding?
 
@@ -238,9 +238,9 @@ is a directive from the router library and it acts as a placeholder that marks t
 
 is a directive on the anchor tags give the router control over those elements.
 
-- RouterLinkActive is a directive that toggles css classes for active RouterLink bindings based on the current RouterState
-- RouterState is a tree of activated routes
-- configures the router with routes via the RouterModule.forRoot(routesArrayName)
+- **RouterLinkActive** is a directive that toggles css classes for active RouterLink bindings based on the current RouterState
+- **RouterState** is a tree of activated routes
+- **configures** the router with routes via the RouterModule.forRoot(routesArrayName)
 
 ## 30 - What are router events?
 
