@@ -90,8 +90,8 @@ Angular application goes through an entire set of processes or has a lifecycle r
 
 - **Constructor:** A default method which is called when the class is instantiated.
 - **ngOnChanges:** Executes when a new component is created
-- **ngOnInit: This is called whenever the initialization of the directive/component
-- **ngDoCheck: Runs when change detection runs.
+- **ngOnInit:** This is called whenever the initialization of the directive/component
+- **ngDoCheck:** Runs when change detection runs.
 - **ngAfterContentInit:** This is called after content(ng-content) has been projected into the view.
 - **ngAfterContentChecked:** This is called after every projected content has been checked
 - **ngAfterViewInit:** Called after the components view (and child view) has been initialized.
