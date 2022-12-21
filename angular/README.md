@@ -64,6 +64,9 @@ A template is a HTML view
 
 Modules are logical boundaries in application and the application is divided into separate modules to separate the functionality of application.
 
+An NgModule is a class marked by the @NgModule decorator. 
+@NgModule takes a metadata object that describes how to compile a component's template and how to create an injector at runtime.
+
 ```sh
 @NgModule ({
    imports:      [ BrowserModule ],
