@@ -64,18 +64,24 @@ A template is a HTML view
 
 Modules are logical boundaries in application and the application is divided into separate modules to separate the functionality of application.
 
-An NgModule is a class marked by the @NgModule decorator. 
+An [NgModule](https://angular.io/guide/ngmodules) is a class marked by the @NgModule decorator. 
 @NgModule takes a metadata object that describes how to compile a component's template and how to create an injector at runtime.
 
 ```sh
-@NgModule ({
-   imports:      [ BrowserModule ],
-   declarations (Declare the class types ): [ AppComponent, YourPipe, YourDirective ],
--classes shouldn't be declared-: (A class that's already declared in another NgModule/ Ngmodule/ Service/ Helper classes)
-   bootstrap:    [ AppComponent ],
-   providers: []
+// imports
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+
+// @NgModule decorator with its metadata
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
 ## 11 - What are lifecycle hooks available?
