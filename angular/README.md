@@ -26,11 +26,11 @@ TypeScript is a typed superset of JavaScript
 
 ## 4 - What are the key components of Angular?
 
-> Component
-> Modules
-> Templates
-> Services
-> Metadata
+- Component
+- Modules
+- Templates
+- Services
+- Metadata
 
 ## 5 - What are directives?
 
