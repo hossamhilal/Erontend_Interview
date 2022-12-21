@@ -1,4 +1,4 @@
-# Angular-InterView
+![angular](https://angular.io/assets/images/logos/angular/logo-nav@2x.png) 
 
 ## 1 - What is Angular Framework?
 
@@ -88,8 +88,8 @@ export class AppModule {}
 
 Angular application goes through an entire set of processes or has a lifecycle right from its initiation to the end of the application.
 
-- Constructor: A default method which is called when the class is instantiated.
-- ngOnChanges: Executes when a new component is created
+- **Constructor:** A default method which is called when the class is instantiated.
+- **ngOnChanges:** Executes when a new component is created
 - ngOnInit: This is called whenever the initialization of the directive/component
 - ngDoCheck: Runs when change detection runs.
 - ngAfterContentInit: This is called after content(ng-content) has been projected into the view.
