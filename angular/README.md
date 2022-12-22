@@ -151,16 +151,29 @@ inserts or removes an element based on a truthy/falsy condition
 
 `[property]="expression" / {{username}}`
 
+- In Angular, template expressions are computations or assignments done in the template inside the interpolation curly braces. This expression is considered as local and only exist inside the template.
+
 - expressions are prohibited in template expression
   assignments `(=, +=, -=, ...)`
   new
   chaining expressions with ; or ,
   increment and decrement operators (++ and --)
+```sh
+<p>The sum of 1 + 1 is {{1 + 1}}.</p>
+<p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}.</p>
+```
 
 ## 18 - What are template statements?
 
-The template statements appear in quotes to the right of the = symbol like (event)="statement".
+- A template statement responds to an event raised by a binding target such as an element, component, or directive. Template statements are written in the format (event)="statement". As illustrated in the code snippet.
+- The template statements appear in quotes to the right of the = symbol like (event)="statement".
 Also there are statements not allowed
+- A template statement has a side effect.
+- Template statements only exist within the context of a given template.
+
+```sh
+<button (click)="deleteUser()">Delete hero</button>
+```
 
 ## 19 - What are pipes?
 
@@ -179,17 +192,36 @@ takes in data as input and transforms it to a desired output
 
 ## 21 - What is the difference between pure and impure pipe?
 
-- pure pipe: is only called when Angular detects a change in the value or the parameters passed to a pipe
-- An impure pipe: is called for every change detection cycle no matter whether the value or parameters changes.
+- **pure pipe:** is only called when Angular detects a change in the value or the parameters passed to a pipe
+- **An impure pipe:** is called for every change detection cycle no matter whether the value or parameters changes.
 
 ## 22 - What is HttpClient and its benefits?
 
-- a simplified client HTTP API which is based on top of XMLHttpRequest interface
+- The HttpClient in @angular/common/http offers a simplified client HTTP API which is based on top of XMLHttpRequest interface
   Contains testability features
   Provides typed request and response objects
   Intercept request and response
   Supports Observalbe APIs
   Supports streamlined error handling
+  
+```s
+import { NgModule }         from '@angular/core';
+import { BrowserModule }    from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    // import HttpClientModule after BrowserModule.
+    HttpClientModule,
+  ],
+  declarations: [
+    AppComponent,
+  ],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule {}
+```
 
 ## 23 - How can you read full response?
 
@@ -212,9 +244,9 @@ is the practice of broadcasting to a list of multiple subscribers in a single ex
 
 ## 27 - What are the various kinds of directives?
 
-- Components: directives with a template
-- Structural directives: change the DOM layout by adding and removing DOM elements.
-- Attribute directives: change the appearance or behavior of an element
+- **Components: directives** with a template
+- **Structural directives:** change the DOM layout by adding and removing DOM elements.
+- **Attribute directives:** change the appearance or behavior of an element
 
 ```sh
 @Directive({
@@ -232,15 +264,15 @@ export class HighlightDirective {
 
 is a directive from the router library and it acts as a placeholder that marks the spot in the template where the router should display
 
-- ActivatedRoute contains the information about a route associated with a component loaded in an outlet
+- **ActivatedRoute** contains the information about a route associated with a component loaded in an outlet
 
 ## 29 - What are router links?
 
 is a directive on the anchor tags give the router control over those elements.
 
-- **RouterLinkActive** is a directive that toggles css classes for active RouterLink bindings based on the current RouterState
-- **RouterState** is a tree of activated routes
-- **configures** the router with routes via the RouterModule.forRoot(routesArrayName)
+- **RouterLinkActive :** is a directive that toggles css classes for active RouterLink bindings based on the current RouterState
+- **RouterState :** is a tree of activated routes
+- **configures :** the router with routes via the RouterModule.forRoot(routesArrayName)
 
 ## 30 - What are router events?
 
