@@ -44,7 +44,7 @@ Components are the most basic UI building block
 
 ## 7 - What are the differences between Component and Directive?
 
-- **Component: **
+- **Component:**
   @Component meta-data annotation
   used to create UI widgets
   break up the application into smaller components
