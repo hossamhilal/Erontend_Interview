@@ -36,7 +36,14 @@ Angular is a TypeScript-based open-source front-end platform
 
 ## 5 - What are directives?
 
-Directives add behaviour to an existing DOM element
+- **Directives** add behaviour to an existing DOM element
+- **Directives** are classes or attributes that add new behavior or modify the existing behavior to the elements in the template.
+
+**Types of directives:**
+- Component directive
+- Structural directive :   `ngIf`  , `ngFor` 
+- Attribute directive  : `ngStyle`, `ngClass`, `ngModel` 
+
 
 ## 6 - What are components?
 
@@ -574,3 +581,38 @@ Ivy is a new rendering engine for Angular
 - Faster re-build time
 - Improved payload size
 - Improved template type checking
+
+
+## 64 - What is Annotations ?
+- These are hard-coded language feature. 
+- Annotations are only metadata set on the class that is used to reflect the metadata library. 
+- When user annotates a class, the compiler creates an attribute on that class called annotations, stores an annotation array in it .
+
+**Example:** @ComponentAnnotation
+
+```sh 
+  import {  ComponentAnnotation as Component} from '@angular/core';
+```
+
+## 65 - What is Decorators ?
+- **A decorator** is a function that adds metadata to a class .
+- **A decorator** is just a function that gives you access to the target that needs to be decorated. 
+
+**Types of Decorators:**
+- Class decorators like `@Component` , `@NgModule` .
+- Property decorators like `@Input` and `@Output` .
+- Method decorators like `@HostListener` .
+- Parameter decorators like `@Injectable` .
+
+
+## 66 - What is the Differences between Annotation and Decorator ?
+
+| Feature                | Annotation                                                        | Decorator                                                 |
+| ---------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------|
+| compiler               | Traceur                                                           | Typescript                                                |
+| Definition             | only metadata set on the class using the Reflect Metadata library.| corresponds to a function that is called on the class.    |
+| Form custom validation | Defined as metaData                                               | Defined as function                                       |
+| used for               | creating an attribute annotations that stores array.              | Function that gets the object that needs to be decorated. |
+| flexability            | Hard-coded                                                        | not Hard-coded                                            |
+
+
