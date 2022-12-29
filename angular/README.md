@@ -1,5 +1,73 @@
 ![angular](https://angular.io/assets/images/logos/angular/logo-nav@2x.png) 
 
+- 1 - What is Angular Framework?
+- 2 - What is the difference between AngularJS and Angular?
+- 3 - What is TypeScript?
+- 4 - What are the key components of Angular?
+- 5 - What are directives?
+- 6 - What are components?
+- 7 - What are the differences between Component and Directive?
+- 8 - What is a template?
+- 9 - What is a module?
+- 10 - What are lifecycle hooks available?
+- 11 - What is a data binding?
+- 12 - What is metadata?
+- 13 - What is a service?
+- 14 - What is dependency injection in Angular?
+- 15 - What is the purpose of async pipe?
+- 16 - What is the purpose of ngFor directive? 
+- 17 - What is the purpose of ngIf directive?
+- 18 - What are template expressions?
+- 19 - What are template statements?
+- 20 - What are pipes?
+- 21 - Give an example of custom pipe?
+- 22 - What is the difference between pure and impure pipe?
+- 23 - What is HttpClient and its benefits?
+- 24 - How can you read full response?
+- 25 - How do you perform Error handling?
+- 26 - What is multicasting?
+- 27 - What are observable creation functions?
+- 28 - What are the various kinds of directives?
+- 29 - What is router outlet?
+- 30 - What are router links?
+- 31 - What are router events?
+- 32 - What is a DI token?
+- 33 - What is Angular DSL?
+- 34 - What is platform in Angular?
+- 35 - How do you select an element with in a component template?
+- 36 - How do you detect route change in Angular?
+- 37 - How do you pass headers for HTTP client?
+- 38 - Is Angular supports dynamic imports?
+- 39 - What is lazy loading?
+- 40 - What are the ways to trigger change detection in Angular?
+- 41 - What are the security principles in angular?
+- 42 - What is Sanitization? Is angular supports it?
+- 43 - What is DOM sanitizer?
+- 44 - What are Http Interceptors?
+- 45 - What is AOT compiler / JIT?
+- 46 - How do you select an element in component template?
+- 47 - What is router state?
+- 48 - What is safe navigation operator?
+- 49 - Is any special configuration required for Angular9?
+- 50 - Is mandatory to pass static flag for ViewChild?
+- 51 - What are reactive forms?
+- 52 - What are template driven forms?
+- 53 - What are the differences between reactive forms and template driven forms?
+- 54 - What are the different ways to group form controls?
+- 55 - How do you update specific properties of a form model?
+- 56 - What is the purpose of FormBuilder?
+- 57 - How do you verify the model changes in forms?
+- 58 - What are the types of validator functions?
+- 59 - How do you optimize the performance of async validators?
+- 60 - What is host property in css?
+- 61 - what is ViewEncapsulation ?
+- 62 - What is Angular Ivy?
+- 63 - What are the features included in ivy preview ?
+- 64 - What is Annotations ?
+- 65 - What is Decorators ?
+- 66 - What is the Differences between Annotation and Decorator ?
+-----
+
 ## 1 - What is Angular Framework?
 
 Angular is a TypeScript-based open-source front-end platform
