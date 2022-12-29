@@ -1,26 +1,63 @@
+
+- 1 - Observable,
+- 2 - Subscription
+- 3 - Pipe
+- 4 - of
+- 5 - map
+- 6 - PLUCK
+- 7 - filter
+- 8 - first
+- 9 - Difference between combineLatest, zip, withLatestFrom?
+- 10 - switchMap / mergeMap / ConcatMap / exhaustMap
+- 11 - takeUntil
+- 12 - TAP
+- 13 - debounceTime , distinctUntilChanged:
+- 14 - catchError
+- 15 - throttleTime(3000):
+- 16 - What is RxJS ?
+- 17 - What is Stream ?
+- 18 - What is Obserable?
+- 19 - What is the difference between an observable and a promise?
+- 20 - What is the difference between Cold and Hot Observables ?
+- 21 - What are RxJS Operators ?
+- 22 - What is Observers and Subscriptions ?
+- 23 - What is Subject?
+- 24 - What is the difference between subject , behaviorSubject , replaySubject , asyncSubject?
+- 25 - What is Reactive programming and how does it relate to Angular?
+- 26 - higher-order Observable?
+- 27 - Schedulers?
+- 28 - What is the difference between Reactive Programming and Imperative Programming?
+- 29 - What do you understand by the term Non-Blocking in RxJS?
+- 30 - What does Asynchronous means in the context of RxJS or Reactive programming?
+- 31 - What is the difference between Failure and Error?
+- 32 - What is the difference between Imperative, Functional and Reactive Programming?
+- 33 - What is forkJoin operator?
+
+-----
+
 ## 1 - Observable
 
 a function that returns a stream of values
 
 ## 2 - Subscription
 
-represents the execution of an Observable by calling the method “.subscribe”.
+- represents the execution of an Observable by calling the method “.subscribe”.
 
-Most frequently used operators :-
+- Most frequently used operators .
 
-## 3 - Pipe:
+## 3 - Pipe
 
 the way to use operators, returns another Observable
 
-## 4 - of:
+## 4 - of
 
 emitting values in a sequence.
 
-## 5 - map:
+## 5 - map
 
 transform an Observable of items into another Observable
 
-## 6 - PLUCK:
+## 6 - PLUCK
 
 Similar to map but Pluck is used when we just need to pass single field value
 
@@ -31,25 +68,25 @@ const obsPluck$ = from(data).pipe(
 ).subscribe(x => console.log(x));
 ```
 
-## 7 - filter:
+## 7 - filter
 
 filter the values from source Observable
 
-## 8 - first:
+## 8 - first
 
-if we are only interested in the first value that meets the Observable needs.
-Use case: the sing up page of an app
+- if we are only interested in the first value that meets the Observable needs.
+- Use case: the sing up page of an app
 
 ## 9 - Difference between combineLatest, zip, withLatestFrom?
 
-combineLatest:
+**combineLatest:**
 combines multiple Observables to create an Observable whose values are calculated from the latest values of each of its input Observables
 Use case: real-time text filters
 
-Zip:
+**Zip:**
 will wait for all observable to emit and then it zips those values into an array as an output.
 
-withLatestFrom:
+**withLatestFrom:**
 
 ```sh
 //emit every 5s
@@ -73,7 +110,7 @@ const example = secondSource.pipe(
 ...
 _/
 
-## 10 - switchMap/mergeMap/ConcatMap:
+## 10 - switchMap / mergeMap / ConcatMap:
 
 merged Observables in the output Observable, emitting values only from the most recently projected Observable
 Use case: product detail page
@@ -88,19 +125,19 @@ ngOnInit(): void {
   }
 ```
 
-switchMap cancels previous HTTP requests that are still in progress, while mergeMap lets them finish
-ConcatMap Strategy —Queuing up every new Observable, and subscribing to a new observable only when the last observable completed
+- **switchMap** cancels previous HTTP requests that are still in progress, while mergeMap lets them finish
+- **ConcatMap** Strategy —Queuing up every new Observable, and subscribing to a new observable only when the last observable completed
 
-Mapping:
+**Mapping:**
 
-- flatMap/mergeMap - creates an Observable immediately for any source item, all previous Observables are kept alive
-- concatMap - waits for the previous Observable to complete before creating the next one
-- switchMap - for any source item, completes the previous Observable and immediately creates the next one
-- exhaustMap - source items are ignored while the previous Observable is not completed
+- **flatMap/mergeMap** - creates an Observable immediately for any source item, all previous Observables are kept alive
+- **concatMap** - waits for the previous Observable to complete before creating the next one
+- **switchMap** - for any source item, completes the previous Observable and immediately creates the next one
+- **exhaustMap** - source items are ignored while the previous Observable is not completed
 
 ## 11 - takeUntil:
 
-takeUntil subscribes and begins mirroring the source Observable. It also monitors a second Observable, notifier that you provide. If the notifier emits a value, the output Observable stops mirroring the source Observable and completes. If the notifier doesn’t emit any value and completes then takeUntil will pass all values
+**takeUntil** subscribes and begins mirroring the source Observable. It also monitors a second Observable, notifier that you provide. If the notifier emits a value, the output Observable stops mirroring the source Observable and completes. If the notifier doesn’t emit any value and completes then takeUntil will pass all values
 Use case: managing unsubscriptions in Angular components
 
 ## 12 - TAP:
@@ -141,11 +178,12 @@ is an object that over time and asynchronously emits multiple data values
 
 ## 19 - What is the difference between an observable and a promise?
 
-Promise:
+**Promise:**
 
 - emits a single value,
-- is Not Lazy A Promise cannot be cancelled
-  Observable:
+- is Not Lazy A Promise cannot be cancelled.
+
+**Observable:**
 - emits multiple values over a time.
 - is cold. It's not called until we're registered to it.
 - You may cancel an Observable with the unsubscribe() method
@@ -153,8 +191,8 @@ Promise:
 
 ## 20 - What is the difference between Cold and Hot Observables ?
 
-- Cold observables start to run in up and subscription, so observable sequence only starts pushing values to observers when subscribe is called.
-- hot observables produce values even before subscriptions made.such as (mousemove events, WebSocket connections)
+- **Cold** observables start to run in up and subscription, so observable sequence only starts pushing values to observers when subscribe is called.
+- **hot observables** produce values even before subscriptions made.such as (mousemove events, WebSocket connections)
 
 ## 21 - What are RxJS Operators ?
 
@@ -162,21 +200,21 @@ a method that acts on an Observable and changes the stream in some way
 
 ## 22 - What is Observers and Subscriptions ?
 
-- Observer is a set of callbacks that know how to listen to the values of the Observable.
+- **Observer** is a set of callbacks that know how to listen to the values of the Observable.
 
-- Subscription is an observable execution
+- **Subscription** is an observable execution
 
 ## 23 - What is Subject?
 
-Subject is a special type of Observable that allows values to be multicasted to many Observers
+**Subject** is a special type of Observable that allows values to be multicasted to many Observers
 Every Subject is an Observer. It is an object with the methods next(v), error(e), and complete().
 
 ## 24 - What is the difference between subject, behaviorSubject, replaySubject, asyncSubject?
 
-- Subject: only upcoming values
-- behaviorSubject: one previous value and upcoming values
-- replySubject all previous value and upcoming values
-- asyncSubject latest value when stream will close
+- **Subject:** only upcoming values
+- **behaviorSubject:** one previous value and upcoming values
+- **replySubject** all previous value and upcoming values
+- **asyncSubject** latest value when stream will close
 
 ## 25 - What is Reactive programming and how does it relate to Angular?
 
@@ -195,8 +233,8 @@ Rx.Observable.of(42).repeat().subscribe()
 
 ## 28 - What is the difference between Reactive Programming and Imperative Programming?
 
-- Reactive programming is a declarative programming paradigm which deals with asynchronous data streams.
-- In Reactive Programming, observables emit data, and send it to the subscribers. This process can be called as data being PUSHed in reactive programming.
+- **Reactive programming** is a declarative programming paradigm which deals with asynchronous data streams.
+- **In Reactive Programming**, observables emit data, and send it to the subscribers. This process can be called as data being PUSHed in reactive programming.
 - On the other hand, data is being PULLed in imperative programming, where we explicitly request data (requesting data from the DB.. etc)
 
 ## 29 - What do you understand by the term Non-Blocking in RxJS?
@@ -209,16 +247,16 @@ Asynchronous is the antonym of synchronous processing, which implies that the cl
 
 ## 31 - What is the difference between Failure and Error?
 
-- A failure can be defined as an unexpected event within a service that prevents it from functioning normally.
-- An error is a common condition that can appear during input validation that will be communicated to the client as part of the message's normal processing.
+- **A failure** can be defined as an unexpected event within a service that prevents it from functioning normally.
+- **An error** is a common condition that can appear during input validation that will be communicated to the client as part of the message's normal processing.
 
 ## 32 - What is the difference between Imperative, Functional and Reactive Programming?
 
-- Imperative Programming: Imperative programming is a programming paradigm where each line of code is sequentially executed to produce the desired result. This programming paradigm forces programmers to write "how" a program will solve a certain task.
+- **Imperative Programming:** Imperative programming is a programming paradigm where each line of code is sequentially executed to produce the desired result. This programming paradigm forces programmers to write "how" a program will solve a certain task.
 
-- Functional Programming: Functional programming is a programming paradigm where we can set everything as a result of a function that avoids changing states and mutating data.
+- **Functional Programming:** Functional programming is a programming paradigm where we can set everything as a result of a function that avoids changing states and mutating data.
 
-- Reactive Programming: Reactive programming is a programming paradigm with asynchronous data streams or event streams. An event stream can be anything like keyboard inputs, button taps, gestures, GPS location updates, accelerometer, iBeacon etc. Here, we can listen to a stream and react to it according to the situation.
+- **Reactive Programming:** Reactive programming is a programming paradigm with asynchronous data streams or event streams. An event stream can be anything like keyboard inputs, button taps, gestures, GPS location updates, accelerometer, iBeacon etc. Here, we can listen to a stream and react to it according to the situation.
 
 ## 33 - What is forkJoin operator?
 
